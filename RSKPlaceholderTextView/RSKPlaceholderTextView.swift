@@ -23,13 +23,7 @@ import UIKit
     
     private var placeholderAttributes: [NSAttributedString.Key: Any] {
         
-        var placeholderAttributes = [NSAttributedString.Key: Any]()
-        
-        self.typingAttributes.forEach { (key, value) in
-            
-            let attributedStringKey = key
-            placeholderAttributes[attributedStringKey] = value
-        }
+        var placeholderAttributes = self.typingAttributes
         
         if placeholderAttributes[.font] == nil {
             
